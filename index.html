@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Nova — Carmen Alexandra Rodríguez Ascanio · Arte artesanal con estilo</title>
+<meta name="description" content="Nova es el portafolio de Carmen Alexandra Rodríguez Ascanio: ilustración, animación, cuadros pintados a mano y bolsos artesanales de perlas y nailo. Barranquilla, Colombia. Todo hecho por ella, a mano y con cariño.">
+<meta name="author" content="Carmen Alexandra Rodríguez Ascanio">
+<meta name="theme-color" content="#F8F5F0">
+
+<!-- Open Graph / redes sociales.
+     Esto es lo que se ve al pegar el enlace en WhatsApp, Facebook o X.
+
+     Las rutas van en ABSOLUTO: WhatsApp, Facebook y X no resuelven rutas
+     relativas, y con una ruta relativa el enlace se ve SIN FOTO. Si algún día
+     cambia el dominio, hay que actualizar og:url, og:image y twitter:image
+     al mismo tiempo. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nova">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Nova — Arte artesanal con estilo">
+<meta property="og:description" content="Ilustración, animación, cuadros pintados a mano y bolsos artesanales de perlas y nailo. Todo lo hago yo, con mis manos y con mucho cariño.">
+<meta property="og:url" content="https://anderson0416.github.io/nova-portafolio/">
+<!-- Tarjeta de 1200x630 (1.91:1, la proporción que espera summary_large_image),
+     armada con un cuadro de la serie Nova y los colores de la marca. -->
+<meta property="og:image" content="https://anderson0416.github.io/nova-portafolio/img/og-image.jpg">
+<meta property="og:image:secure_url" content="https://anderson0416.github.io/nova-portafolio/img/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cuadro pintado a mano de la serie Nova, junto al nombre del portafolio de Carmen Alexandra Rodríguez Ascanio.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nova — Arte artesanal con estilo">
+<meta name="twitter:description" content="Ilustración, animación, cuadros pintados a mano y bolsos artesanales de perlas y nailo.">
+<meta name="twitter:image" content="https://anderson0416.github.io/nova-portafolio/img/og-image.jpg">
+<meta name="twitter:image:alt" content="Cuadro pintado a mano de la serie Nova, junto al nombre del portafolio de Carmen Alexandra Rodríguez Ascanio.">
+<link rel="canonical" href="https://anderson0416.github.io/nova-portafolio/">
+
+<!-- Favicon en línea (data URI): sin archivo extra y sin 404 -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23F8F5F0'/%3E%3Ctext%20x='32'%20y='36'%20text-anchor='middle'%20font-family='Georgia,serif'%20font-size='40'%20fill='%23C8A66A'%3EN%3C/text%3E%3C/svg%3E">
+
+<!-- Marca la clase .js ANTES de la hoja de estilos: los estilos de "reveal"
+     sólo ocultan contenido cuando existen, así un fallo de JS nunca oculta texto.
+
+     IMPORTANTE: la red de seguridad del "reveal" vive AQUÍ y no en js/main.js.
+     Este script lo ejecuta el propio documento HTML, así que sigue vivo aunque
+     main.js dé error, se bloquee o ni siquiera se llegue a descargar. Sin esto,
+     si main.js falla, `html.js [data-reveal]{opacity:0}` dejaría la página en
+     blanco (sólo se vería la cabecera). main.js reutiliza window.forceRevealAll()
+     en su ruta normal. -->
+<script>
+(function () {
+  var doc = document.documentElement;
+  doc.classList.add('js');
+
+  var done = false;
+
+  /* Revela todo lo que tenga [data-reveal] y quita los retardos.
+     Se anula la transición a propósito: la red de seguridad no puede depender
+     del motor de animaciones. Si el <timeline> se queda parado, un bloque con
+     opacity:0 se quedaría invisible aunque lleve .is-visible. Aquí no hay nada
+     que esperar: se pinta de golpe y ya. */
+  window.forceRevealAll = function () {
+    if (done) { return; }
+    var nodes = document.querySelectorAll('[data-reveal]');
+    if (!nodes.length) { return; }   /* aún no se ha pintado el body: reintentamos luego */
+    done = true;
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].style.setProperty('transition', 'none');
+      nodes[i].style.setProperty('--reveal-delay', '0ms');
+      nodes[i].classList.add('is-visible');
+    }
+  };
+
+  /* Un 404 de imagen no debe revelar la página: sólo los fallos de script. */
+  function onError(e) {
+    var t = e && e.target;
+    if (t && t !== window && t.tagName && t.tagName !== 'SCRIPT') { return; }
+    window.forceRevealAll();
+  }
+
+  window.addEventListener('error', onError);
+  window.addEventListener('unhandledrejection', function () { window.forceRevealAll(); });
+
+  /* Red de seguridad temporal: pase lo que pase, a los 2500 ms nada queda oculto. */
+  window.setTimeout(window.forceRevealAll, 2500);
+}());
+</script>
+
+<!-- Fraunces (Google Fonts) + Satoshi (Fontshare; Satoshi NO está en Google Fonts) -->
+<!-- Se pide 400 y 500: el peso 700 no se usa en el diseño, así que no se descarga. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&amp;display=swap" rel="stylesheet" crossorigin="anonymous">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&amp;display=swap" rel="stylesheet" crossorigin="anonymous">
+
+<!-- El retrato del hero es el LCP: se pide antes de que el navegador llegue a
+     ese <img>. Es la MISMA ruta que usa la imagen, así que no duplica descarga:
+     el navegador reutiliza la petición. Si algún día cambia la foto del hero,
+     hay que cambiar esta ruta también. -->
+<link rel="preload" as="image" href="img/bolsos/bolso-04.jpg" fetchpriority="high">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ======================================================================
+     HEADER
+     ====================================================================== -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="#inicio">Nova<span class="brand__dot" aria-hidden="true"></span></a>
+
+    <button class="nav-toggle" id="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="nav-primary" aria-label="Abrir menú">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+
+    <nav class="nav" id="nav-primary" aria-label="Navegación principal">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#inicio">Inicio</a></li>
+        <li><a class="nav__link" href="#sobre-mi">Sobre mí</a></li>
+        <li><a class="nav__link" href="#portafolio">Portafolio</a></li>
+        <li><a class="nav__link" href="#servicios">Servicios</a></li>
+        <li><a class="nav__link" href="#contacto">Contacto</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm nav__cta" href="https://wa.me/573042494983" target="_blank" rel="noopener">Escríbeme</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ====================================================================
+       #inicio — HERO
+       ==================================================================== -->
+  <section class="hero" id="inicio">
+    <div class="container hero__grid">
+
+      <figure class="hero__figure" data-reveal>
+        <img src="img/bolsos/bolso-04.jpg" width="1179" height="1168"
+             alt="Bolso artesanal de perlas y nailo de la colección Nova, fotografiado de frente"
+             loading="eager" fetchpriority="high" decoding="async">
+        <figcaption class="hero__badge">Hecho a mano · Barranquilla</figcaption>
+      </figure>
+
+      <div class="hero__text" data-reveal style="--reveal-delay:120ms">
+        <span class="eyebrow">Carmen Alexandra Rodríguez Ascanio</span>
+        <h1 class="hero__title">Nova</h1>
+        <p class="hero__tagline">Arte artesanal con estilo</p>
+        <p class="hero__lead">Creo cosas que se sienten de verdad, no solo se ven bonitas. 🎨💎</p>
+        <p class="hero__sub">Ilustración, animación, cuadros pintados a mano y bolsos artesanales de perlas y nailo. Todo lo hago yo, con mis manos y con mucho cariño.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#portafolio">Ver portafolio</a>
+          <a class="btn btn--ghost" href="#contacto">Contactar</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       #sobre-mi
+       ==================================================================== -->
+  <section class="section section--alt" id="sobre-mi">
+    <div class="container">
+
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Sobre mí</span>
+        <h2>Soy Carmen, y mi marca es Nova</h2>
+      </div>
+
+      <!-- Presentación: texto + collage, para que la línea de 68ch no deje media
+           columna vacía a su derecha en pantallas anchas. -->
+      <div class="presentacion" data-reveal>
+        <div class="presentacion__text">
+          <p>Hola, soy Carmen, soy diseñadora gráfica, y mi marca es Nova. Lo que más me apasiona y en lo que más me destaco es ilustrar: darle vida a las ideas con mis dibujos, crear imágenes que cuenten cosas y tengan su propio estilo.</p>
+          <p>También hago animaciones en After Effects y todo lo que tiene que ver con lo audiovisual, cuidando que todo quede ordenado, bonito y con mucha personalidad. Esa misma dedicación la pongo en todo lo que hago: además de eso, pinto cuadros y hago bolsas artesanales a mano con perlas y nailo, eligiendo bien cada material y cuidando cada detalle para que cada pieza sea única. Para mí todo es lo mismo: crear cosas que se vean bien y tengan sentido.</p>
+        </div>
+        <figure class="presentacion__collage">
+          <img src="img/cuadros/cuadro-03.jpg" width="777" height="779"
+               alt="Cuadro de la serie Nova visto de frente, con mucho color" loading="lazy" decoding="async">
+          <img src="img/cuadros/cuadro-04.jpg" width="860" height="1181"
+               alt="Cuadro pintado a mano de un ciervo con flores, de la serie Nova" loading="lazy" decoding="async">
+        </figure>
+      </div>
+
+      <!-- Propuesta de valor -->
+      <blockquote class="pullquote" data-reveal>
+        <p>En Nova todo lo hago yo, con mis manos y con todo el cariño del mundo. Hago ilustraciones y animaciones y piezas hechas a mano que tienen mi estilo de verdad. Cada dibujo, cada animación y cada bolso son únicos, lo cuido al detalle y lo pienso tal cual mereces. Junto lo que aprendo en diseño con lo que nace de mis manos, para que todo lo que hagas cuente con tu historia, no solo la mía 🎨💎</p>
+        <cite class="pullquote__cite">Todo lo que ves aquí lo hice yo: sin equipos, sin marcas de fábrica, sin atajos.</cite>
+      </blockquote>
+
+      <!-- Personalidad de marca -->
+      <div class="subblock">
+        <h3 class="subblock__title" data-reveal>Mi estilo es mi sello</h3>
+        <div class="grid-3">
+          <article class="trait" data-reveal>
+            <span class="trait__num" aria-hidden="true">01</span>
+            <h3>Soy yo, nada más</h3>
+            <p>Todo lo hago a mi manera, con mi estilo.</p>
+          </article>
+          <article class="trait" data-reveal style="--reveal-delay:60ms">
+            <span class="trait__num" aria-hidden="true">02</span>
+            <h3>Me fijo en cada detalle</h3>
+            <p>No dejo nada a medias. Un dibujo, una animación o un bolso… todo lo cuido pieza por pieza.</p>
+          </article>
+          <article class="trait" data-reveal style="--reveal-delay:120ms">
+            <span class="trait__num" aria-hidden="true">03</span>
+            <h3>Soy cercana, no lejana</h3>
+            <p>No soy una marca que esté lejos. Pongo el corazón en todo y quiero que sientas que lo hago pensando en ti.</p>
+          </article>
+          <article class="trait" data-reveal>
+            <span class="trait__num" aria-hidden="true">04</span>
+            <h3>Tengo mi sello</h3>
+            <p>Lo que hago lleva mi huella, mis dibujos, mis colores. Se ve que es Nova y no otra cosa.</p>
+          </article>
+          <article class="trait" data-reveal style="--reveal-delay:60ms">
+            <span class="trait__num" aria-hidden="true">05</span>
+            <h3>Cada pieza es única</h3>
+            <p>Igual que las personas que la van a tener.</p>
+          </article>
+          <article class="trait" data-reveal style="--reveal-delay:120ms">
+            <span class="trait__num" aria-hidden="true">06</span>
+            <h3>Soy sincera</h3>
+            <p>Lo que ves es lo que hay. Nada de fingir, solo trabajo hecho con cariño.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Mi camino -->
+      <div class="subblock">
+        <h3 class="subblock__title" data-reveal>Mi camino</h3>
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__when">Desde pequeña</span>
+            <h4>El aprendizaje en casa</h4>
+            <p>Desde pequeña ayudaba en la empresa familiar, que distribuía alimentos a los batallones militares. Ahí aprendí desde niña el valor del trabajo, el cuidado y el compromiso con lo que uno hace.</p>
+          </li>
+          <li class="timeline__item" data-reveal style="--reveal-delay:80ms">
+            <span class="timeline__when">Hoy</span>
+            <h4>Diseñadora gráfica</h4>
+            <p>Soy estudiante de Diseño Gráfico en la Universidad Autónoma del Caribe, y junto lo que aprendo en la facultad con lo que creo con mis manos.</p>
+          </li>
+          <li class="timeline__item" data-reveal style="--reveal-delay:160ms">
+            <span class="timeline__when">Ahora</span>
+            <h4>Nova</h4>
+            <p>He pintado, regalado y vendido cuadros propios, y empiezo el emprendimiento de los bolsos artesanales.</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Formación -->
+      <div class="subblock">
+        <h3 class="subblock__title" data-reveal>Formación</h3>
+        <ul class="education">
+          <li class="education__item" data-reveal>
+            <strong>Liceo Montessori — Palmira, Valle del Cauca</strong>
+            <span>Cursé bachillerato aquí.</span>
+          </li>
+          <li class="education__item" data-reveal style="--reveal-delay:60ms">
+            <strong>Colegio Americano — Barranquilla</strong>
+            <span>Terminé el bachillerato aquí.</span>
+          </li>
+          <li class="education__item" data-reveal style="--reveal-delay:120ms">
+            <strong>Universidad Autónoma del Caribe — Barranquilla</strong>
+            <span>Estudiante de Diseño Gráfico.</span>
+          </li>
+        </ul>
+        <!-- PENDIENTE (Carmen): esta redacción viene de una línea ambigua del documento
+             original ("curse medio bachiller en el liceo Montessori... termine mi
+             bachillerato en el colegio americano"). Se recountó como una secuencia de
+             dos pasos (cursar -> terminar) y no como dos impatientas simultáneas.
+             Si en realidad fue un traslado, ajusta el orden y el texto. -->
+      </div>
+
+      <!-- Qué me inspira -->
+      <div class="subblock prose">
+        <h3 class="subblock__title" data-reveal>Qué me inspira</h3>
+        <p data-reveal>Me inspira todo lo que tiene alma y no se hace de prisa. La naturaleza, los colores que veo a mi alrededor y todo lo que se hace con las manos. También las historias de las personas, los momentos especiales y esas cosas que no se repiten dos veces. Me guía la dedicación que vi en mi familia desde pequeña: hacer las cosas bien, con corazón y pensando en los demás.</p>
+      </div>
+
+      <!-- Reconocimientos -->
+      <div class="subblock">
+        <h3 class="subblock__title" data-reveal>Reconocimientos</h3>
+        <div class="highlight" data-reveal>
+          <p>Algunos de mis trabajos académicos, entre ellos un cuadro y varias ilustraciones, fueron seleccionados para ser exhibidos en la facultad de Diseño y en distintas ferias.</p>
+          <p class="highlight__aside">Y lo mejor es saber que lo que hago con cariño y dedicación tiene un lugar.</p>
+        </div>
+      </div>
+
+      <!-- Cifras reales -->
+      <ul class="stats" data-reveal>
+        <li class="stat">
+          <span class="stat__value">20+</span>
+          <span class="stat__label">bolsos artesanales vendidos</span>
+        </li>
+        <li class="stat">
+          <span class="stat__value">10+</span>
+          <span class="stat__label">cuadros decorativos realizados</span>
+        </li>
+        <li class="stat">
+          <span class="stat__value">Desde los 15</span>
+          <span class="stat__label">años creando piezas a mano</span>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       #portafolio
+       ==================================================================== -->
+  <section class="section" id="portafolio">
+    <div class="container">
+
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Portafolio</span>
+        <h2>Todo lo que hago, hecho por mí</h2>
+        <p class="lead">Cinco formas de crear. Elige una para ver cómo la trabajo.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtrar proyectos" data-reveal>
+        <button class="filters__btn" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="filters__btn" type="button" data-filter="bolsos" aria-pressed="false">Bolsos</button>
+        <button class="filters__btn" type="button" data-filter="cuadros" aria-pressed="false">Cuadros</button>
+        <button class="filters__btn" type="button" data-filter="disenos" aria-pressed="false">Diseño editorial</button>
+        <button class="filters__btn" type="button" data-filter="ilustracion" aria-pressed="false">Ilustración</button>
+        <button class="filters__btn" type="button" data-filter="animacion" aria-pressed="false">Animación</button>
+      </div>
+
+      <p class="visually-hidden" id="filtro-status" role="status" aria-live="polite">Mostrando 5 de 5 proyectos.</p>
+
+      <div class="grid-cards" id="grid-cards">
+
+        <!-- ── 1 · Bolsos ─────────────────────────────────────────── -->
+        <article class="card" data-category="bolsos" data-reveal>
+          <div class="card-media">
+            <img src="img/bolsos/bolso-01.jpg" width="1179" height="1285"
+                 alt="Bolso de perlas y nailo, vista frontal" loading="lazy" decoding="async">
+            <span class="card-cat">Bolsos</span>
+            <span class="card-name" aria-hidden="true">Bolsos artesanales de perlas y nailo</span>
+          </div>
+          <div class="card__body">
+            <h3>Bolsos artesanales de perlas y nailo</h3>
+            <p>Piezas únicas engarzadas y cosidas a mano, una por una.</p>
+            <details class="case" name="proyecto">
+              <summary>Ver el caso</summary>
+              <div class="case__body">
+                <div class="shots">
+                  <figure class="shot"><img src="img/bolsos/bolso-01.jpg" alt="Bolso de perlas y nailo, vista frontal" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/bolsos/bolso-02.jpg" alt="Bolso de perlas y nailo en tonos cálidos" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/bolsos/bolso-03.jpg" alt="Detalle del cierre y las perlas del bolso" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/bolsos/bolso-04.jpg" alt="Bolso de perlas y nailo sobre superficie clara" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/bolsos/bolso-05.jpg" alt="Bolso artesanal con correa de perlas" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/bolsos/bolso-06.jpg" alt="Bolso artesanal con detalles cosidos a mano" loading="lazy" decoding="async"></figure>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Contexto</span>
+                  <p>El emprendimiento nació porque quería que Nova no se quedara solo en lo digital: quería que alguien pudiera llevar una pieza mía encima. Vi que la gente busca cosas que no se vean igual en todas partes, y los bolsos de perlas y nailo son justo eso: piezas únicas, hechas a mano y pensadas para alguien. El problema era empezar de cero un emprendimiento sin tener un lugar donde mostrar lo que hacía, y este portafolio es la forma de darle un sitio y una identidad.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Mi rol</span>
+                  <p>Todo lo hago yo. Elijo las perlas, el nailo y los materiales, y las monto a mano pieza por pieza. Yo diseño, yo las confezo y yo reviso que cada una quede pareja y bien hecha. Yo las fotografío y yo entrego.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Proceso</span>
+                  <p>Primero elijo el diseño y los colores de las perlas y del hilo. Después las engarzo y las coso a mano, una por una, cuidando que la tensión quede pareja. Al final reviso cada punto, cierro y pongo el cierre. Si una pieza no me gusta, la deshago y la empiezo otra vez: prefiero tardar más que entregar algo que no sienta mío.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Herramientas</span>
+                  <p>Perlas, hilo de nailo, agujas, broches y materiales de bijutería. Solo trabajo a mano: no hay máquina.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Solución</span>
+                  <p>Bolsos artesanales únicos, hechos con materiales elegidos con cuidado y pensados para momentos especiales. Cada uno es distinto del otro y en cada detalle se reconoce mi mano.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Resultados</span>
+                  <p>He vendido alrededor de 20 bolsos personalizados. Todavía no tengo métricas más grandes y prefiero no inventar ninguna. Lo que sí me llevo es que aprendí a costear un producto, a elegir materiales y a entregar algo terminado con cariño.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- ── 2 · Cuadros ─────────────────────────────────────────── -->
+        <article class="card" data-category="cuadros" data-reveal style="--reveal-delay:60ms">
+          <div class="card-media">
+            <img src="img/cuadros/cuadro-01.jpg" width="728" height="967"
+                 alt="Cuadro pintado a mano de la serie Nova" loading="lazy" decoding="async">
+            <span class="card-cat">Cuadros</span>
+            <span class="card-name" aria-hidden="true">Cuadros pintados a mano — Serie Nova</span>
+          </div>
+          <div class="card__body">
+            <h3>Cuadros pintados a mano — Serie Nova</h3>
+            <p>Una serie pintada capa por capa, con lienzo, madera y piedras.</p>
+            <details class="case" name="proyecto">
+              <summary>Ver el caso</summary>
+              <div class="case__body">
+                <div class="shots">
+                  <figure class="shot"><img src="img/cuadros/cuadro-01.jpg" alt="Cuadro de la serie Nova, primera pieza" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/cuadros/cuadro-02.jpg" alt="Cuadro de la serie Nova con composición floral" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/cuadros/cuadro-03.jpg" alt="Cuadro de la serie Nova, detalle de color" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/cuadros/cuadro-04.jpg" alt="Cuadro pintado a mano, pieza vertical" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/cuadros/cuadro-05.jpg" alt="Cuadro de la serie Nova con textura marcada" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/cuadros/cuadro-07.jpg" alt="Cuadro pequeño de la serie Nova" loading="lazy" decoding="async"></figure>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Contexto</span>
+                  <p>Pinto desde hace mucho, y lo que sale de mis manos siempre ha sido mi manera de descansar de lo digital y de mostrar algo que es cien por ciento hecho por mí. El problema es que los cuadros vivían sueltos: algunos regalados, algunos vendidos y otros guardados en mi casa, sin que nadie más los viera. Con esta serie los junto y les doy un mismo lenguaje: piezas que no se vean como una foto de internet, sino como algo pintado a mano.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Mi rol</span>
+                  <p>Yo pinto todo. Elijo los temas, preparo la superficie, mezclo los colores y pinto yo misma, una pieza a una y sin apuro. También pinto piedras y les trabajo detalles pequeños con el pincel.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Proceso</span>
+                  <p>Primero elijo el tema y hago un boceto pequeño. Después preparo la superficie, que puede ser lienzo o madera, y pinto por capas, dejando que cada capa seque antes de la otra. Cuando termino le doy una capa final y reviso los bordes. No hay prisa: un cuadro puede llevarme varios días y eso está bien.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Herramientas</span>
+                  <p>Pinceles, pintura acrílica y acrílica al óleo, lienzos y maderas preparadas, y piedras. Aquí no uso herramientas digitales: es todo a mano.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Solución</span>
+                  <p>Una serie de cuadros pintados a mano, cada uno único y pensado para colgar en casa o para regalar. Junto con ellos van las piedras pintadas, que sirven como piezas pequeñas que acompañan a los bolsos y que rematan esos momentos especiales que no se repiten. Todo lleva mi sello, para que se vea que lo pinté yo.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Resultados</span>
+                  <p>He pintado, regalado y vendido cuadros propios, y he realizado más de 10 cuadros decorativos entre pinturas y composiciones con piedras. Uno de ellos fue seleccionado para ser exhibido en la facultad de Diseño y en distintas ferias.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- ── 3 · Diseño editorial ────────────────────────────────── -->
+        <article class="card" data-category="disenos" data-reveal style="--reveal-delay:120ms">
+          <div class="card-media">
+            <img src="img/disenos/editorial-01.jpg" width="1400" height="990"
+                 alt="Página abierta de la publicación editorial de Nova" loading="lazy" decoding="async">
+            <span class="card-cat">Diseño editorial</span>
+            <span class="card-name" aria-hidden="true">Diseño editorial</span>
+          </div>
+          <div class="card__body">
+            <h3>Diseño editorial</h3>
+            <p>Libros y revistas maquetados página por página, con retícula y jerarquía clara.</p>
+            <details class="case" name="proyecto">
+              <summary>Ver el caso</summary>
+              <div class="case__body">
+                <!-- Esta tarjeta es sólo papel: ocho páginas del libro, sin video.
+                     El video de Nova vive en su propia tarjeta, la de Animación. -->
+                <div class="shots shots--4">
+                  <figure class="shot"><img src="img/disenos/editorial-01.jpg" alt="Página doble de la publicación con jerarquía visual" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/disenos/editorial-02.jpg" alt="Página de la publicación con retícula definida" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/disenos/editorial-03.jpg" alt="Contraportada de la publicación de Nova" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/disenos/editorial-04.jpg" alt="Portada de la revista de Nova" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/disenos/editorial-05.jpg" alt="Página de información con bloques de texto" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/disenos/editorial-06.jpg" alt="Página titulada Redundancia" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/disenos/editorial-07.jpg" alt="Página titulada Ruido" loading="lazy" decoding="async"></figure>
+                  <figure class="shot"><img src="img/disenos/editorial-08.jpg" alt="Ex libris de la publicación de Nova" loading="lazy" decoding="async"></figure>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Contexto</span>
+                  <p>Doy forma a libros y revistas: organizo cada página para que los textos y las imágenes respiren, se entiendan y no se vean apretados. Este proyecto nació de una tarea de la carrera donde tuve que armar una publicación completa, desde la portada hasta la contraportada. El problema era que la información se acumulaba sin jerarquía, y el resultado es una publicación donde se ve exactamente qué es lo importante.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Mi rol</span>
+                  <p>Yo hago todo el proceso: elijo la tipografía, armo la retícula, distribuyo los espacios y reviso página por página antes de entregar.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Proceso</span>
+                  <p>Primero defino la retícula y los estilos de texto. Después voy colocando los bloques de contenido, ajustando el espacio hasta que la página respire. Al final reviso la publicación completa varias veces: tipografía, márgenes, tamaños y que todo esté donde debe estar.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Herramientas</span>
+                  <p>Adobe Illustrator, Adobe Photoshop y Figma para maquetar y organizar la publicación.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Solución</span>
+                  <p>Una publicación con jerarquía clara: se lee de un vistazo, cada página tiene su propio ritmo y ninguna se siente apretada. Cada publicación lleva mi estilo y dedicación, lista para compartir.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Resultados</span>
+                  <p>No tengo cifras de audiencia y prefiero no inventar ninguna. Lo que sí me llevo es que aprendí a organizar contenido real dentro de una retícula y a que todo tenga un motivo para estar donde está.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- ── 4 · Ilustración ─────────────────────────────────────── -->
+        <article class="card" data-category="ilustracion" data-reveal>
+          <div class="card-media">
+            <!-- PENDIENTE (Carmen): sustituir este bloque por <img src="img/ilustraciones/ilustracion-01.jpg" alt="..."> cuando tengas las fotos de las ilustraciones. La carpeta img/ilustraciones/ ya queda lista. -->
+            <div class="ph-illustration">
+              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M30 214 C 84 148, 122 262, 182 204 S 280 130, 372 190"/>
+                  <path d="M22 250 C 92 214, 148 276, 214 240 S 318 194, 378 236"/>
+                  <path d="M54 118 C 104 80, 150 142, 208 104"/>
+                  <circle cx="300" cy="88" r="26"/>
+                  <path d="M96 60 q22 -18 44 0 t44 0"/>
+                  <path d="M238 270 q20 -16 40 0 t40 0"/>
+                  <path d="M168 44 l10 20 22 3 -16 15 4 22 -20 -11 -20 11 4 -22 -16 -15 22 -3 z"/>
+                </g>
+              </svg>
+              <span class="ph-illustration__label">Colección de ilustraciones Nova</span>
+            </div>
+            <span class="card-cat">Ilustración</span>
+            <span class="card-name" aria-hidden="true">Colección de ilustraciones Nova</span>
+          </div>
+          <div class="card__body">
+            <h3>Colección de ilustraciones Nova</h3>
+            <p>Ilustraciones originales dibujadas a mano, coloreadas y digitalizadas por mí.</p>
+            <details class="case" name="proyecto">
+              <summary>Ver el caso</summary>
+              <div class="case__body">
+                <div class="case__block">
+                  <span class="case__label">Contexto</span>
+                  <p>Mi ilustración siempre fue mi forma de contar cosas, y eso fue justo lo que me pidió la carrera: dejar de dibujar solo para mí y hacer imágenes que le sirvan a alguien más. El problema era que tenía muchos dibujos hechos a lo largo de la carrera y no había un lugar donde se vieran juntos ni se entendieran como parte de un mismo trabajo. Con la colección de ilustraciones de Nova los uno y les doy un nombre, un estilo y un orden, para que quien los vea sepa qué soy y qué sé hacer.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Mi rol</span>
+                  <p>Yo lo hago todo. Dibujo a mano, elijo la paleta, coloreo y después digitalizo la ilustración para dejarla lista para la web. Investigo, ilustro y le pongo el detalle final a cada pieza; no le dejo nada a nadie más.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Proceso</span>
+                  <p>Primero miro bien qué quiero contar y lo dibujo a mano, porque así es como me salen las cosas de verdad. Después lo paso a digital, lo ordeno y le doy color. Al final reviso todo otra vez, porque no me gusta dejar nada a medias: cada pieza tiene que verse bonita y tener sentido, no solo que se vea linda.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Herramientas</span>
+                  <p>Adobe Illustrator y Photoshop para la ilustración digital, y lápiz, marcadores y acuarelas para los bocetos y el color inicial. Figma para ordenar el portafolio antes de pasarlo a la web.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Solución</span>
+                  <p>Una colección de ilustraciones que se entienden como una sola serie: mismo estilo, misma manera de dibujar y mismo cuidado en cada detalle. Quien la ve reconoce que hay una persona detrás de cada imagen.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Resultados</span>
+                  <p>Varias ilustraciones mías fueron seleccionadas, junto con un cuadro, para ser exhibidas en la facultad de Diseño y en distintas ferias.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- ── 5 · Animación ──────────────────────────────────────── -->
+        <article class="card" data-category="animacion" data-reveal style="--reveal-delay:60ms">
+          <div class="card-media card-media--video">
+            <!-- VIDEO RETIRADO DEL SITIO PUBLICO: img/video/animacion-nova.mp4 contiene un personaje con derechos de autor. Para volver a mostrar una animacion, reemplaza este <img> por un <video muted loop playsinline preload="metadata" poster="..."> con un video propio de Carmen. -->
+            <!-- El póster (img/disenos/animacion-poster.jpg) también se retiró: es
+                 un fotograma del MISMO personaje con derechos de autor, así que
+                 publicarlo dejaba el problema igual. En su lugar va el marcador
+                 de marca, con la misma caja cuadrada que tenía el video. -->
+            <div class="ph-illustration">
+              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+                <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="200" cy="150" r="74"/>
+                  <path d="M182 118 L232 150 L182 182 Z"/>
+                  <path d="M70 246 C 128 214, 168 268, 226 240 S 306 208, 336 226"/>
+                  <path d="M96 58 q20 -16 40 0 t40 0"/>
+                </g>
+              </svg>
+              <span class="ph-illustration__label">Animación cuadro por cuadro</span>
+            </div>
+            <span class="card-cat">Animación</span>
+            <span class="card-name" aria-hidden="true">Animaciones Nova</span>
+          </div>
+          <div class="card__body">
+            <h3>Animaciones Nova</h3>
+            <p>Historias que necesitan movimiento para que se entiendan. Animadas cuadro por cuadro.</p>
+            <details class="case" name="proyecto">
+              <summary>Ver el caso</summary>
+              <div class="case__body">
+                <div class="case__block">
+                  <span class="case__label">Contexto</span>
+                  <p>Hago animaciones en After Effects porque las historias también necesitan movimiento para que se entiendan. Muchos de mis dibujos ya contaban algo, pero quietos se quedaban a medias. El problema era que mis animaciones estaban sueltas en mi computador, sin un lugar donde verlas ni saber qué las unía. Con esta sección las junto y dejo claro que animo, y que lo hago yo.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Mi rol</span>
+                  <p>Yo lo hago todo. Yo dibujo el storyboard, yo animo cuadro por cuadro en After Effects y yo le pongo el color, el sonido y el detalle final. Nadie más toca mis animaciones.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Proceso</span>
+                  <p>Primero dibujo a mano, porque así es como me salen las cosas de verdad. Después paso el dibujo a After Effects y animo cuadro por cuadro, dándole movimiento poco a poco para que la historia también cobre vida. Luego meto el color y reviso varias veces, porque no me gusta dejar nada a medias.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Herramientas</span>
+                  <p>After Effects para el movimiento y el color. Adobe Illustrator y Photoshop para preparar las piezas y las texturas. Auriculares y una buena pista de música para el sonido.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Solución</span>
+                  <p>Unas animaciones cortas que muestran que sé mover una ilustración, no solo dibujarla. Cada una tiene mi estilo y mi manera de contar, y lo importante es que se ven juntas.</p>
+                </div>
+                <div class="case__block">
+                  <span class="case__label">Resultados</span>
+                  <p>Todavía no tengo vistas públicas y prefiero no inventar ninguna. Lo que sí me llevo es que aprendí a animar cuadro por cuadro sin perder el estilo del dibujo original, y que el movimiento tiene que ir con calma: si algo se mueve muy rápido, no se siente.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       #servicios
+       ==================================================================== -->
+  <section class="section section--alt" id="servicios">
+    <div class="container">
+
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Servicios</span>
+        <h2>En qué te puedo ayudar</h2>
+        <p class="lead">Cuéntame qué tienes en mente y lo armamos juntos.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="service" data-reveal>
+          <h3>Ilustración</h3>
+          <p>Creación de ilustraciones originales hechas a mano. Para personas que buscan piezas únicas con expresión visual.</p>
+          <a class="service__cta" href="https://wa.me/573042494983?text=Hola%20Carmen%2C%20quiero%20una%20ilustraci%C3%B3n%20original." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+        </article>
+
+        <article class="service" data-reveal style="--reveal-delay:60ms">
+          <h3>Cuadros pintados a mano y piedras</h3>
+          <p>Obra original con técnicas manuales, lista para decorar o regalar. Para personas que valoran el arte hecho con dedicación.</p>
+          <a class="service__cta" href="https://wa.me/573042494983?text=Hola%20Carmen%2C%20quiero%20un%20cuadro%20pintado%20a%20mano." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+        </article>
+
+        <article class="service" data-reveal style="--reveal-delay:120ms">
+          <h3>Bolsos de perlas y nailo</h3>
+          <p>Diseño y confección de bolsos artesanales con materiales de calidad, hechos a mano con perlas y nailo. Para quienes buscan un accesorio único y especial.</p>
+          <a class="service__cta" href="https://wa.me/573042494983?text=Hola%20Carmen%2C%20quiero%20un%20bolso%20de%20perlas%20y%20nailo." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+        </article>
+
+        <article class="service" data-reveal>
+          <h3>Diseño editorial</h3>
+          <p>Diseño de libros y revistas organizando cada página con textos e imágenes en armonía y con cuidado.</p>
+          <a class="service__cta" href="https://wa.me/573042494983?text=Hola%20Carmen%2C%20necesito%20un%20proyecto%20de%20dise%C3%B1o%20editorial." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+        </article>
+      </div>
+
+      <!-- Precios -->
+      <div class="pricing">
+
+        <div class="pricing__group" data-reveal>
+          <h3 class="pricing__title">Piezas individuales · precio por unidad</h3>
+          <table class="price-table">
+            <caption class="visually-hidden">Precios por pieza individual, en pesos colombianos</caption>
+            <thead>
+              <tr><th scope="col">Servicio</th><th scope="col">Precio</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Ilustración (1 pieza original)</td><td>desde $80.000 COP</td></tr>
+              <tr><td>Bolso de perlas y nailo (1 pieza)</td><td>desde $90.000 COP</td></tr>
+              <tr><td>Cuadro pintado a mano</td><td>desde $115.000 COP</td></tr>
+              <tr><td>Cuadro con piedras decorativas</td><td>desde $95.000 COP</td></tr>
+              <tr><td>Animación corta (hasta 15 s)</td><td>desde $320.000 COP</td></tr>
+              <tr><td>Diseño editorial (libro o revista)</td><td>desde $280.000 COP</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pricing__group" data-reveal>
+          <h3 class="pricing__title">Planes</h3>
+          <div class="plans">
+
+            <article class="plan">
+              <h3>Básico</h3>
+              <p class="plan__scope">Una pieza individual con revisión y ajustes incluidos</p>
+              <p class="plan__price">Desde $120.000 COP</p>
+              <a class="btn btn--ghost" href="https://wa.me/573042494983?text=Hola%20Carmen%2C%20quiero%20informaci%C3%B3n%20del%20plan%20B%C3%A1sico." target="_blank" rel="noopener">Escribirme por WhatsApp</a>
+            </article>
+
+            <article class="plan plan--featured">
+              <span class="plan__flag">Plan intermedio</span>
+              <h3>Pyme</h3>
+              <p class="plan__scope">Un paquete de piezas o una serie de ilustraciones</p>
+              <p class="plan__price">Desde $350.000 COP</p>
+              <a class="btn btn--primary" href="https://wa.me/573042494983?text=Hola%20Carmen%2C%20quiero%20una%20cotizaci%C3%B3n%20del%20plan%20Pyme." target="_blank" rel="noopener">Solicitar cotización</a>
+            </article>
+
+            <article class="plan">
+              <h3>Profesional</h3>
+              <p class="plan__scope">Un proyecto completo de identidad visual o una animación</p>
+              <p class="plan__price">Desde $800.000 COP</p>
+              <a class="btn btn--ghost" href="https://wa.me/573042494983?text=Hola%20Carmen%2C%20quiero%20agendar%20una%20conversaci%C3%B3n%20sobre%20el%20plan%20Profesional." target="_blank" rel="noopener">Agendar una conversación</a>
+            </article>
+
+          </div>
+        </div>
+
+        <p class="legal-note" data-reveal>Precios de referencia por unidad, en pesos colombianos (COP). La cotización final se cierra por proyecto, según el alcance. Métodos de pago: Nequi, Daviplata y transferencia bancaria. Respondo dentro de los dos días hábiles siguientes.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       CTA BAND
+       ==================================================================== -->
+  <section class="cta-band">
+    <div class="container">
+      <h2 data-reveal>¿Tienes una idea? Cuéntamela.</h2>
+      <p data-reveal style="--reveal-delay:80ms">Trabajo por proyecto, en Barranquilla y también por correo para clientes fuera de Colombia.</p>
+      <div class="cta-band__actions" data-reveal style="--reveal-delay:160ms">
+        <a class="btn btn--dark" href="https://wa.me/573042494983" target="_blank" rel="noopener">Escribirme por WhatsApp</a>
+        <a class="btn btn--ghost" href="#portafolio">Ver el portafolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       #contacto
+       ==================================================================== -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="contact__grid">
+
+        <div data-reveal>
+          <div class="section-head">
+            <span class="eyebrow">Contacto</span>
+            <h2>Hablemos</h2>
+            <p class="lead">Correo o WhatsApp, como te quede más fácil. Respondo dentro de los dos días hábiles siguientes.</p>
+          </div>
+
+          <!-- Sin backend: main.js arma el mailto: al enviar. Nunca action="mailto:".
+           Cada .field__error lleva role="alert" para que el lector de pantalla
+               anuncie qué campo falló, no sólo que se puso en rojo. -->
+          <form class="form" id="contact-form" novalidate>
+            <div class="field">
+              <label for="nombre">Nombre <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required
+                     aria-describedby="error-nombre">
+              <p class="field__error" id="error-nombre" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="correo">Correo <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="correo" name="correo" autocomplete="email" required
+                     aria-describedby="error-correo">
+              <p class="field__error" id="error-correo" role="alert"></p>
+            </div>
+
+            <div class="field field--select">
+              <label for="necesidad">¿Qué te gustaría crear?</label>
+              <select id="necesidad" name="necesidad" aria-describedby="error-necesidad">
+                <option value="Elige una opción">Elige una opción</option>
+                <option value="Ilustración">Ilustración</option>
+                <option value="Cuadro pintado a mano">Cuadro pintado a mano</option>
+                <option value="Cuadro con piedras">Cuadro con piedras</option>
+                <option value="Bolso de perlas y nailo">Bolso de perlas y nailo</option>
+                <option value="Diseño editorial">Diseño editorial</option>
+                <option value="Animación">Animación</option>
+                <option value="Otro">Otro</option>
+              </select>
+              <p class="field__error" id="error-necesidad" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="mensaje">Mensaje <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="mensaje" name="mensaje" rows="5" required
+                        aria-describedby="error-mensaje"></textarea>
+              <p class="field__error" id="error-mensaje" role="alert"></p>
+            </div>
+
+            <p class="form__note">Este formulario abre tu aplicación de correo con el mensaje ya escrito. Si prefieres, escríbeme directo por <a href="https://wa.me/573042494983" target="_blank" rel="noopener">WhatsApp</a>.</p>
+
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+
+            <div>
+              <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="info" aria-label="Datos de contacto" data-reveal style="--reveal-delay:100ms">
+          <div class="info__item">
+            <span class="info__label">Correo</span>
+            <p><a href="mailto:carmen_alexandra06@hotmail.com">carmen_alexandra06@hotmail.com</a></p>
+          </div>
+          <div class="info__item">
+            <span class="info__label">WhatsApp</span>
+            <p><a href="https://wa.me/573042494983" target="_blank" rel="noopener">+57 304 249 4983</a></p>
+          </div>
+          <div class="info__item">
+            <span class="info__label">Ubicación</span>
+            <p>Barranquilla, Atlántico, Colombia</p>
+            <p>UTC-5 (COT)</p>
+          </div>
+          <div class="info__item">
+            <span class="info__label">Horarios</span>
+            <p>Lunes a viernes de 9:00 a 18:00</p>
+            <p>Sábados de 9:00 a 13:00</p>
+          </div>
+          <div class="info__item">
+            <span class="info__label">Disponibilidad internacional</span>
+            <p>Sí, por correo electrónico</p>
+          </div>
+
+          <div>
+            <span class="info__label">Redes</span>
+            <div class="socials">
+              <a class="social" href="https://wa.me/573042494983" target="_blank" rel="noopener" aria-label="Escribir a Nova por WhatsApp al +57 304 249 4983">
+                WhatsApp
+              </a>
+              <!-- PENDIENTE (Carmen): reemplazar "#" por el @ real de Instagram/TikTok -->
+              <a class="social social--pending" href="#" aria-label="Instagram de Nova — enlace pendiente de configurar">
+                Instagram <span class="social__badge">Pronto</span>
+              </a>
+              <!-- PENDIENTE (Carmen): reemplazar "#" por el @ real de Instagram/TikTok -->
+              <a class="social social--pending" href="#" aria-label="TikTok de Nova — enlace pendiente de configurar">
+                TikTok <span class="social__badge">Pronto</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======================================================================
+     FOOTER
+     ====================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a class="footer__brand" href="#inicio">Nova</a>
+        <p class="footer__tagline">Arte artesanal con estilo</p>
+      </div>
+      <p class="footer__cats">Ilustración · Animación · Cuadros · Bolsos · Diseño editorial</p>
+      <div>
+        <div class="socials">
+          <a class="social" href="https://wa.me/573042494983" target="_blank" rel="noopener" aria-label="Escribir a Nova por WhatsApp al +57 304 249 4983">WhatsApp</a>
+          <!-- PENDIENTE (Carmen): reemplazar "#" por el @ real de Instagram/TikTok -->
+          <a class="social social--pending" href="#" aria-label="Instagram de Nova — enlace pendiente de configurar">Instagram <span class="social__badge">Pronto</span></a>
+          <!-- PENDIENTE (Carmen): reemplazar "#" por el @ real de Instagram/TikTok -->
+          <a class="social social--pending" href="#" aria-label="TikTok de Nova — enlace pendiente de configurar">TikTok <span class="social__badge">Pronto</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Barranquilla, Atlántico, Colombia</span>
+      <span>© <span id="year">2026</span> Nova — Carmen Alexandra Rodríguez Ascanio. Hecho a mano.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
